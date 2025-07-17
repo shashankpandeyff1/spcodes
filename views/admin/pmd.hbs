@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Information About Shashank Pandey">
+    <meta name="keywords" content="shashank pandey,Shashank Pandey,Who is shashank pandey?">
+    <meta name="author" content="Shashank Pandey">
+    <link rel="shortcut icon" href="/images/shashank.png">
+    <link rel="stylesheet" href="/css/update.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Post Sources</title>
+    <style media="screen">
+      a{
+        position: relative !important;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="/crud">back to view data page</a>
+    <div class="box">
+      <h1>Hey Shashank wanna Update these data ? GO ON.</h1>
+    {{#each md}}
+    <h2>{{this.head}}</h2>
+    <p>{{this.para}}</p>
+    <p>{{this.npic}}</p>
+    <p>{{this.npicurl}}</p>
+       <a href="/dltmd/{{this.id}}"> delete metadata {{id}}</a><br><br>
+     <form class="" action="/nmd/{{this.id}}" method="post">
+       <input type="text" name="head" value="{{this.head}}"><br><br>
+       <textarea name="para" rows="8" cols="80">{{this.para}}</textarea><br><br>
+       <input type="submit" name="" value="update metadata !">
+     </form>
+  <!--   <a href="/upmd/{{this.id}}"> update metadata {{id}}</a>-->
+    <br><br><hr>
+    {{/each}}
+
+        </div>
+  </body>
+</html>

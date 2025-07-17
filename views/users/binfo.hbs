@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>{{title}}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Information About Shashank Pandey">
+    <meta name="keywords" content="{{#each list}}{{this.list}}-{{/each}} Shashank Pandey-{{#each keywords}}{{this.keyword}}-{{/each}}">
+    <meta name="author" content="Shashank Pandey">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5998261330137420"
+     crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="/images/shashank.png">
+    <link rel="stylesheet" href="/css/binfo.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/smbox.css">
+    <style media="screen">
+      img{
+        width: 500px;
+        height: 300px;
+        border-radius: 3px;
+      }
+    </style>
+  </head>
+  <body>
+    <header id="header">
+      <a href="/">←</a> <h1>Shashank Pandey's Portfolio</h1>
+      <span onclick="showsm()">...</span>
+    </header><br>
+    <div class="thumbnail">
+  <a href="/allposts">  <img src="/images/blogt.png" alt="{{#each keywords}}{{this.keyword}}-{{/each}}"></a>
+    </div>
+    {{#each blog}}
+    <div class="pinfo1">
+      <img src="{{this.picurl}}" alt="{{this.title}}">
+      <p>Published On:<span>{{this.doc}}</span></p>
+      <h1>{{this.title}}</h1>
+    </div>
+    <div class="content">
+      <h1>Explanation:</h1>
+      <p>{{this.exp}}</p><br>{{/each}}
+    <!--  <div class="content">-->
+        {{#each metad}} <br>
+        <h1>{{head}}</h1>
+        <p>{{para}}</p><br>
+        {{#if npicurl}}
+        <img src="{{npicurl}}" alt="{{head}}"><br>
+        {{/if}}
+        {{/each}}<br>
+        <h1>Notable Points:</h1>
+        {{#each lists}}
+        <ul>
+          <li>{{this.list}}</li><br>
+        </ul>
+        {{/each}}
+  <!--    </div>-->
+        {{#each blog}}<br>
+      <h1>Conclusion:</h1>
+      <p>{{this.con}}</p>
+    </div>
+    <div class="lv">
+      <a href="/likeblog/{{this.id}}"><i class="fa fa-thumbs-up" style="font-size:24px;color:#3f8a89"></i> {{this.likes}}</a>
+      <p>Views:{{this.views}}</p>
+    </div>
+    <div class="cmt">
+      <form class="" action="/comment" method="post">
+        <input type="hidden" name="id" value="{{this.id}}" required><br><br>
+        <textarea name="comment" rows="8" cols="80" required placeholder="comment down your views" class="ta"></textarea><br><br>
+        <input type="submit" name="" value="comment" class="ac">
+      </form>{{/each}}
+   <br>
+      <div class="cm">
+      {{#each comments}}
+    <button><i class="fa fa-user" style="font-size:22px;color:darkgrey;"> </i> {{comment}}</button><br><br>
+    {{/each}}
+    </div>
+    </div>
+    <div class="source">
+      <h1>Sources:</h1>
+      {{#each source}}
+    <a href="{{url}}">{{url}}</a><br>
+      {{/each}}
+    </div>
+    <footer id="footer">
+      <div class="naam">Shashank Pandey</div>
+      <center>
+      <div class="links">
+        {{#each cond}}
+        <ul>
+          <li> <a href="{{this.insta}}"><i class="fa fa-instagram" style="font-size:20px"></i></a> </li>
+            <li> <a href="{{this.linkedin}}"><i class="fa fa-linkedin-square" style="font-size:20px"></i></a> </li>
+              <li> <a href="{{this.twitter}}"><i class="fa fa-twitter-square" style="font-size:20px"></i></a> </li>
+        </ul>{{/each}}
+      </div></center><br>
+      <p> © All Rights Reserved by shashankspandey.com</p>
+    </footer>
+    <div class="smbox">
+      <span onclick="closesm()">X</span>
+      <h1>Share This Page:</h1>
+      <ul>
+        <li class="smboxlink"> <a href="#" class="smboxlink wa" target="_blank"><i class="fa fa-whatsapp" style="font-size:22px;color:green;"></i></a> </li>
+        <li class="smboxlink"> <a href="#" class="smboxlink fb" target="_blank"><i class="fa fa-facebook-f" style="font-size:22px;color:blue;"></i></a> </li>
+        <li class="smboxlink">  <a href="#" class="smboxlink tr" target="_blank"><i class="fa fa-twitter" style="font-size:22px;color:skyblue;"></i></a> </li>
+        <li class="smboxlink"> <a href="#" target="_blank" class="smboxlink ld"><i class="fa fa-linkedin-square" style="font-size:22px;color:blue;"></i></a> </li>
+      </ul>
+    </div>
+    <script src="/js/sm.js"></script>
+  <!--  {{#each blog}}
+    <h1>{{this.title}}</h1>
+    <p>{{this.doc}}</p>
+    <img src="{{this.picurl}}" alt="{{this.title}}">
+    <p>{{this.exp}}</p>
+    <p>{{this.con}}</p>
+    <p>views:{{this.views}}</p>
+    <a href="/likeblog/{{this.id}}">like post {{this.likes}}</a>
+    <form class="" action="/comment" method="post">
+      <input type="text" name="id" value="{{this.id}}" required><br><br>
+      <textarea name="comment" rows="8" cols="80" required placeholder="comment down your views"></textarea><br><br>
+      <input type="submit" name="" value="comment">
+    </form>
+    {{/each}}
+    {{#each comments}}
+    <p>{{comment}}</p>
+    {{/each}}-->
+  </body>
+</html>

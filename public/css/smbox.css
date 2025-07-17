@@ -1,0 +1,95 @@
+.smbox{
+  position: fixed;
+  left: 37%;
+  top: 40%;
+  width: 420px;
+  height: 220px;
+  background: #fff;
+  border: 2px solid darkgrey;
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  display: none;
+}
+.smbox h1{
+  font-size: 22px;
+  color: darkgrey;
+  position: relative;
+  top: -13px;
+}
+.smboxlink{
+  text-decoration: none;
+  list-style: none;
+  display: inline;
+  padding: 8px;
+}
+.smbox span{
+  position: relative;
+  top: -50px;
+  left: 170px;
+  cursor: pointer;
+}
+.thumbnail{
+  width: 100%;
+  height: auto;
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.thumbnail img{
+  width: 400px;
+  height: 215px;
+  border-radius: 2px;
+}
+.t2{
+  width: 900px !important;
+  height: 215px;
+  border-radius: 2px;
+}
+/*media queries*/
+@media (max-width:900px){
+  .smbox{
+    left: 2px !important;
+  }
+}
+@media (max-width:942px){
+  .thumbnail{
+    padding: 3px !important;
+    flex-direction: column !important;
+  }
+  .thumbnail img{
+    width: 100% !important;
+  }
+}
+@media (max-width:470px){
+  
+}
+@media (max-width:430px){
+  .smbox{
+    width: 100% !important;
+    left: 0 !important;
+  }
+}
+@media (max-width:370px){
+  .smbox span{
+    left: 140px !important;
+  }
+}
+@media (max-width:310px){
+  .source a{
+    font-size: 13px !important;
+  }
+}
+@media (max-width:305px){
+  .smbox span{
+    left: 70px !important;
+  }
+}
+@media (max-width:209px){
+  .smboxlink{
+    padding: 5px !important;
+  }
+}

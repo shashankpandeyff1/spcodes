@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Information About Shashank Pandey">
+    <meta name="keywords" content="shashank pandey,Shashank Pandey,Who is shashank pandey?">
+    <meta name="author" content="Shashank Pandey">
+    <link rel="shortcut icon" href="/images/shashank.png">
+    <link rel="stylesheet" href="/css/admin.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Hey! Shashank Manage Me</title>
+  </head>
+  <body>
+    <header id="header">
+      <h1>howdy shashank(pro coder) <img src="/images/shashank.png" alt="shashank pandey"> </h1>
+      <ul>
+        <li> <a href="/crud">View App Data</a> </li>
+        <li> <a href="/manageusers">Manage Users</a> </li>
+  <li> <a href="/logout"><i class="fa fa-sign-out" style="font-size:24px;color:#3f8a89;"></i></a></li>
+</ul>
+    </header>
+    <div class="stats">
+      <div class="stat">
+        <h1>No. Of Inquiries Received</h1>
+        <p>{{ir}}</p>
+      </div>
+      <div class="stat">
+        <h1>Total No. Of Posts</h1>
+        <p>{{tp}}</p>
+      </div>
+      <div class="stat">
+        <h1>Total No. Of Projects</h1>
+        <p>{{tpr}}</p>
+      </div>
+      <div class="stat">
+        <h1>Total No. Of Subscribers</h1>
+        <p>{{ts}}</p>
+      </div>
+      <div class="stat">
+        <h1>Total No. Of Techs Learned</h1>
+        <p>{{tl}}</p>
+      </div>
+    {{#each stats}}
+    <div class="stat">
+      <h1>No. Of Views & Likes</h1>
+    <p>{{this.views}},{{this.likes}}</p>
+    {{/each}}</div>
+    </div>
+    <div class="content">
+    <div class="abt">
+      <h1>My Info</h1><br>
+      <form class="" action="/abt" method="post" enctype="multipart/form-data">
+        <p>Select Cover Pic:</p>
+        <input type="file" name="pic" value="" required><br><br>
+        <textarea name="abt" rows="8" cols="80" required placeholder="about me"></textarea><br><br>
+        <input type="text" name="tag" value="" required placeholder="new tag"><br><br>
+        <input type="text" name="doc" value="" required placeholder="date of creation" class="doc"><br><br>
+        <input type="submit" name="" value="add info !">
+      </form>
+    </div><br>
+    <div class="tech">
+      <h1>Add a New Tech in Arsenal</h1><br>
+      <form class="" action="/techie" method="post">
+          <input type="text" name="tech" value="" required placeholder="tech"><br><br>
+          <input type="text" name="doc" value="" required placeholder="date of creation" class="doc"><br><br>
+          <textarea name="why" rows="8" cols="80" required placeholder="why tech"></textarea><br><br>
+          <input type="submit" name="" value="add tech !">
+      </form>
+    </div><br>
+  <div class="projects">
+    <h1>Add a New Project</h1><br>
+    <form class="" action="/project" method="post" enctype="multipart/form-data">
+      <input type="hidden" name="url" value="" class="pageurl">
+      <input type="text" name="title" value="" placeholder="project title" required maxlength="25"><br><br>
+      <textarea name="intro" rows="8" cols="80" required placeholder="project intro" maxlength="10000"></textarea><br><br>
+      <input type="text" name="dou" value="" required placeholder="date of creation" class="doc"><br><br>
+      <input type="file" name="pic" value="" required><br><br>
+      <input type="submit" name="" value="add a project !">
+    </form><br>
+    <h1>add a pic to your existing project !!</h1><br>
+    <form class="" action="/npic" method="post" enctype="multipart/form-data">
+      <input type="text" name="id" value="" required placeholder="project id"><br><br>
+      <input type="file" name="pic" value="" required><br><br>
+      <input type="submit" name="" value="add a pic !">
+    </form>
+  </div><br>
+  <div class="posts">
+    <h1>Add a New Blog Post</h1><br>
+    <form class="" action="/post" method="post" enctype="multipart/form-data">
+      <input type="hidden" name="url" value="" class="pageurl">
+      <input type="text" name="title" value="" required placeholder="post title"><br><br>
+      <input type="text" name="doc" value="" required placeholder="date of creation" class="doc"><br><br>
+      <input type="file" name="pic" value="" required><br><br>
+      <textarea name="exp" rows="8" cols="80" required placeholder="explanation"></textarea><br><br>
+      <textarea name="con" rows="8" cols="80" required placeholder="conclusion"></textarea><br><br>
+      <input type="text" name="source" value="" required placeholder="source"><br><br>
+      <input type="text" name="cat" value="" placeholder="type 'cricket' to place this post in cricket category"><br><br>
+      <input type="submit" name="" value="add post !">
+    </form><br>
+    <button type="button" name="button" onclick="window.location.href='/notifyusers'" class="notify">Notify All Subscribers</button><br><br>
+    <h1>add a source to your existing post !!</h1><br>
+    <form class="" action="/nsource" method="post">
+      <input type="text" name="id" value="{{postid}}" required placeholder="post id"><br><br>
+      <input type="text" name="source" value="" required placeholder="source url"><br><br>
+      <input type="submit" name="" value="add a pic !">
+    </form><br>
+    <h1>Add Post MetaData</h1><br>
+    <form class="" action="/metadata" method="post" enctype="multipart/form-data">
+      <input type="text" name="id" value="{{postid}}" required placeholder="post id"><br><br>
+      <input type="text" name="head" value=""  placeholder="add a new heading"><br> <br>
+      <textarea name="para" rows="8" cols="80"  placeholder="add a new paragraph"></textarea><br><br>
+      <input type="file" name="npic" value="" ><br><br>
+      <input type="submit" name="" value="add metadata !">
+    </form><br>
+    <h1>Add a List in Post</h1><br>
+    <form class="" action="/plist" method="post">
+      <input type="text" name="id" value="{{postid}}" required placeholder="post id"><br><br>
+      <input type="text" name="list" value="" required placeholder="point"><br><br>
+      <input type="submit" name="" value="add point !">
+    </form>
+  </div>
+  <div class="cond">
+    <h1>contact details</h1><br>
+    <form class="" action="/cond" method="post">
+      <input type="text" name="author" value="" required placeholder="author name"><br><br>
+      <input type="email" name="mail" value="" required placeholder="mail"><br><br>
+      <input type="text" name="mob" value="" required placeholder="mob no"><br><br>
+      <input type="text" name="insta" value="" required placeholder="insta link"><br><br>
+      <input type="text" name="linkedin" value="" required placeholder="linkedin link"><br><br>
+      <input type="text" name="twitter" value="" required placeholder="twitter link"><br><br>
+      <input type="text" name="doc" value="" required placeholder="date of creation" class="doc"><br><br>
+      <input type="submit" name="" value="add details !">
+    </form><br>
+  </div>
+  <div class="keywords cond">
+    <h1>Add Keywords</h1><br>
+    <form class="" action="/addkeywords" method="post">
+      <input type="text" name="keyword" value="" required placeholder="e.g, coder"><br><br>
+      <select class="" name="cat" id="opts">
+        <option value="portfolio">portfolio</option>
+        <option value="blogs">blogs</option>
+      </select><br><br>
+      <input type="submit" name="" value="add a keyword !">
+    </form>
+  </div>
+  </div>
+  <footer id="footer">
+    <div class="naam">Shashank Pandey</div>
+    <center>
+    <div class="links">
+      {{#each cond}}
+      <ul>
+        <li class="fl"> <a href="{{this.insta}}"><i class="fa fa-instagram" style="font-size:20px"></i></a> </li>
+          <li class="fl"> <a href="{{this.linkedin}}"><i class="fa fa-linkedin-square" style="font-size:20px"></i></a> </li>
+            <li class="fl"> <a href="{{this.twitter}}"><i class="fa fa-twitter-square" style="font-size:20px"></i></a> </li>
+      </ul>{{/each}}
+    </div></center><br>
+    <p> © All Rights Reserved by shashankspandey.com</p>
+  </footer>
+  <script>
+  function ppl(){
+    let link=encodeURI(window.location.href);
+    let doc=document.querySelectorAll('.doc');
+    let date= new Date();
+    let day=date.getDate();let month=date.getMonth()+1;let year=date.getFullYear();
+    let md=`${day}-${month}-${year}`;
+    let mt=`${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`;
+    document.getElementsByClassName('pageurl')[0].value=`${link}`;
+    document.getElementsByClassName('pageurl')[1].value=`${link}`;
+    for (let i = 0; i < doc.length; i++) {
+      doc[i].value=`date:${md}`;
+    }
+  }
+  ppl();
+  </script>
+  </body>
+</html>

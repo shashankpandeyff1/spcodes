@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Information About Shashank Pandey">
+    <meta name="keywords" content="shashank pandey,Shashank Pandey,Who is shashank pandey?">
+    <meta name="author" content="Shashank Pandey">
+    <link rel="shortcut icon" href="/images/shashank.png">
+    <link rel="stylesheet" href="/css/update.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Update Post</title>
+  </head>
+  <body>
+    <a href="/crud">Back To View Data Page</a>
+    <div class="box">
+      <h1>Hey Shashank wanna Update these data ? GO ON.</h1>
+    <form class="" action="/upost/{{post.id}}" method="post" enctype="multipart/form-data">
+      <input type="text" name="title" value="{{post.title}}" required placeholder="post title"><br><br>
+      <input type="text" name="doc" value="{{post.doc}}" required placeholder="date of creation"><br><br>
+      <input type="file" name="pic" value="" required><br><br>
+      <textarea name="exp" rows="8" cols="80" required placeholder="explanation">{{post.exp}}</textarea><br><br>
+      <textarea name="con" rows="8" cols="80" required placeholder="conclusion">{{post.con}}</textarea><br><br>
+      <input type="submit" name="" value="update post">
+    </form>
+    </div>
+  </body>
+</html>

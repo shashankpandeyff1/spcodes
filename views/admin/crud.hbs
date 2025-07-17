@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Information About Shashank Pandey">
+    <meta name="keywords" content="shashank pandey,Shashank Pandey,Who is shashank pandey?">
+    <meta name="author" content="Shashank Pandey">
+    <link rel="shortcut icon" href="/images/shashank.png">
+    <link rel="stylesheet" href="/css/crud.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Manage Data</title>
+  </head>
+  <body>
+    <header id="header">
+      <h1>howdy shashank(pro coder) <img src="/images/shashank.png" alt="shashank pandey"> </h1>
+      <ul>
+        <li> <a href="/crud">View App Data</a> </li>
+       <li> <a href="/logout"><i class="fa fa-sign-out" style="font-size:24px;color:#3f8a89;"></i></a></li>
+      </ul>
+    </header>
+    <div class="content">
+      <h1>About Me:</h1>
+    <div class="mf">
+      {{#each aboutdata}}
+      <div class="nf">
+        <p><span>About Me:</span>{{this.abt}}</p>
+        <p><span>Tag:</span> {{this.tag}}</p>
+        <p><span>Pic:</span>{{this.pic}}</p>
+        <p><span>Pic Url:</span>{{this.picurl}}</p>
+        <p><span>Date Of Creation:</span>{{this.doc}}</p>
+        <a href="/dabt/{{this.id}}"> <img src="/images/delete.png" alt=""> </a>
+        <a href="/uabt/{{this.id}}"> <img src="/images/update.png" alt=""> </a>
+    </div>
+      {{/each}}
+    </div>
+    <h1>Contact Details:</h1>
+    <div class="mf">
+      {{#each condet}}
+      <div class="nf">
+      <p><span>Date Of Creation:</span>{{this.doc}}</p>
+      <p><span>Author:</span>{{this.author}}</p>
+      <p><span>Mail:</span>{{this.mail}}</p>
+      <p><span>Mobile No.</span>{{this.mob}}</p>
+      <p><span>Insta acc. link:</span>{{this.insta}}</p>
+      <p><span>Linkedin acc. link:</span>{{this.linkedin}}</p>
+      <p><span>Twitter acc. link:</span>{{this.twitter}}</p>
+      <a href="/dcondt/{{this.id}}"> <img src="/images/delete.png" alt=""> </a>
+      <a href="/ucondt/{{this.id}}"> <img src="/images/update.png" alt=""> </a>
+    </div>
+      {{/each}}
+    </div>
+    <h1>User Inquiries:</h1>
+    <div class="mf">
+      {{#each inquiry}}
+      <div class="nf">
+      <p><span>Username:</span>{{this.uname}}</p>
+      <p><span>Email id:</span>{{this.mail}}</p>
+      <p><span>User Message:</span>{{this.msg}}</p>
+      <p><span>Date Of Creation:</span>{{this.doc}}</p>
+      <a href="/dinq/{{this.id}}"><img src="/images/delete.png" alt=""></a>
+    </div>
+      {{/each}}
+    </div>
+    <h1>Blog Posts:</h1>
+    <div class="mf">
+
+      <div class="nf">
+        {{#each posts}}
+      <p><span>post title:</span>{{this.title}}</p>
+      <p><span>date of Creation:</span>{{this.doc}}</p>
+      <p><span>pic:</span>{{this.pic}}</p>
+      <p><span>picurl:</span>{{this.picurl}}</p>
+      <p><span>explanation:</span>{{this.exp}}</p>
+      <p><span>Conclusion:</span>{{this.con}}</p>
+      <p><span>source:</span>{{this.source}}</p>
+      <p> <span>Views & Likes:{{this.views}},{{this.likes}}</span> </p>
+      <a href="/dpost/{{this.id}}"><img src="/images/delete.png" alt=""></a>
+      <a href="/upost/{{this.id}}"><img src="/images/update.png" alt=""></a>
+      <a href="/cc/{{this.id}}">check comments</a>
+      <a href="/cs/{{this.id}}">check source</a>
+      <a href="/pmd/{{this.id}}">check metadata</a>
+      <a href="/listpoint/{{this.id}}">check list points</a>
+      {{/each}}
+    </div>
+
+    </div>
+    <h1>My Projects:</h1>
+    <div class="mf">
+      {{#each projects}}
+      <div class="nf">
+      <p><span>project title:</span>{{this.title}}</p>
+      <p><span>project intro:</span>{{this.intro}}</p>
+      <p><span>date of upload:</span>{{this.dou}}</p>
+      <p><span>Views:</span>{{this.views}}</p>
+      <p><span>Likes:</span>{{this.likes}}</p>
+      <a href="/dpro/{{this.id}}"><img src="/images/delete.png" alt=""></a>
+      <a href="/upro/{{this.id}}"><img src="/images/update.png" alt=""></a>
+      <a href="/showpp/{{this.id}}">check project pics</a>
+      <!--<a href="/showpu/{{this.id}}">check Users who have asked for source code </a>-->
+      <a href="/showpc/{{this.id}}">check comments</a>
+    </div>
+      {{/each}}
+    </div>
+    <h1>Subscribers:</h1>
+    <div class="mf">
+      {{#each subs}}
+      <div class="nf nf1">
+      <p><span>User's Email Id:</span>{{this.mail}},{{this.doc}}</p>
+      <a href="/dsub/{{this.id}}"><img src="/images/delete.png" alt=""></a>
+    </div>
+      {{/each}}
+    </div>
+    <h1>Techs Learned:</h1>
+    <div class="mf">
+      {{#each techs}}
+      <div class="nf nf2">
+      <p><span>Tech:</span>{{this.tech}}</p>
+      <p><span>Why i learned this ?:</span>{{this.why}}</p>
+      <p><span>Date Of Creation</span>{{this.doc}}</p>
+      <a href="/dtech/{{this.id}}"><img src="/images/delete.png" alt=""></a>
+      <a href="/utech/{{this.id}}"><img src="/images/update.png" alt=""></a>
+      </div>
+      {{/each}}
+    </div>
+    </div>
+    <footer id="footer">
+      <div class="naam">Shashank Pandey</div>
+      <center>
+      <div class="links">
+        {{#each cond}}
+        <ul>
+          <li class="fl"> <a href="{{this.insta}}"><i class="fa fa-instagram" style="font-size:20px"></i></a> </li>
+            <li class="fl"> <a href="{{this.linkedin}}"><i class="fa fa-linkedin-square" style="font-size:20px"></i></a> </li>
+              <li class="fl"> <a href="{{this.twitter}}"><i class="fa fa-twitter-square" style="font-size:20px"></i></a> </li>
+        </ul>{{/each}}
+      </div></center><br>
+      <p> © All Rights Reserved by shashankspandey.com</p>
+    </footer>
+  </body>
+</html>

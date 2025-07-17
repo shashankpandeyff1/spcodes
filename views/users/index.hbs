@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Coder Shashank Pandey">
+    <meta name="keywords" content="shashank pandey-Shashank Pandey-Who is shashank pandey?-Shashank Pandey's Portfolio-Shawshank-shawshank redemption,
+    {{#each keywords}}{{this.keyword}}-{{/each}}  ">
+    <meta name="author" content="Shashank Pandey">
+    <title>Shashank Pandey's Portfolio</title>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5998261330137420"
+     crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="/images/shashank.png">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/smbox.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  </head>
+  <body>
+    {{#each abt}}
+    <header id="header">
+    <h1 data-aos='fade-down'> <img src="{{this.picurl}}" alt="coder shashank pandey-{{#each keywords}}{{this.keyword}}-{{/each}}" class="sp" onclick="expandimg()"> <span class="shashank">Shashank</span></h1>
+      <ul class="ul1">
+        <li class="nl"> <a href="/allprojects" class="nl">my projects</a> </li>
+        <li class="nl"> <a href="/allposts" class="nl">posts</a> </li>
+        <li class="nl"> <a href="#" class="nl" onclick="highlight()">about me</a> </li>
+        <!--<li class="nl"><button type="button" name="button" class="msg"  onclick="window.location.href='/allprojects'">Check Projects</button></li>-->
+        <!--<li class="nl"> <button type="button" name="button" class="nl" style="background:none;border:none;cursor:pointer;" onclick="showmb()">subscribe
+      </button>-->
+         </li>
+      </ul>
+      <button type="button" name="button" class="cm" onclick="window.location.href='#conf'">contact me</button>
+    </header>
+    <p>{{mailmsg}}</p>
+    <div class="info">
+      <div class="i1">
+        <h1 class="mname">Hi! I Am <div class="wd">{{this.tag}}</div> <br> Shashank Pandey</h1><br>
+      <p class="aboutme">{{this.abt}}</p><br>
+        {{/each}}
+    <!--    <button type="button" name="button" class="msg"  onclick="window.location.href='/allprojects'">Check Projects</button>-->
+    <button type="button" name="button" class="msg" onclick="showmb()">Subscribe To Newsletter
+  </button>
+        <div class="stats">
+         <div class="s1">
+           <h1>No. Of Visitors</h1>
+           <p>{{views}}</p>
+         </div>
+         <div class="s2">
+           <h1>No. Of Subs.</h1>
+           <p>{{subs}}</p>
+         </div>
+         <div class="s3">
+           <h1>No. Of Projects</h1>
+           <p>{{procount}}</p>
+         </div>
+         <div class="s4">
+           <h1>No. Of Posts</h1>
+           <p>{{postcount}}</p>
+         </div>
+         <div class="s5">
+           <h1>No. Of Likes</h1>
+           <p>{{likecount}}</p>
+         </div>
+        </div><br><br><br>
+        <h1 class="head">What I Know:</h1><br>
+        <div class="lans">
+          {{#each techs}}
+          <div class="lan">
+            {{this.tech}}
+            </div>
+            {{/each}}
+        </div>
+        <div class="darw" onclick="window.location.href='#conf'">
+          ↓
+        </div>
+      </div>
+      <div class="i2">
+        <div class="frame">
+       <img src="/images/vi1/vi1.jpg" alt="shashank pandey">
+       </div>
+      </div>
+    </div><br>
+    <div class="nhead">
+      <h1>My  Projects</h1>
+      <div class="line"></div>
+    </div>
+    <div class="projects" id="projects" data-aos='fade-down'>
+      {{#each projects}}
+      <div class="pro">
+          <div class="p1">
+          <h2>{{this.title}}</h2>
+          <a href="/pinfo/{{this.id}}">→</a>
+            </div>
+            <div class="p2">
+              <p><i class="fa fa-eye" style="font-size:24px;color:#3f8a89"></i>  <span>{{this.views}}</span></p>
+            <!--  <a href="/likepro/{{this.id}}"><i class="fa fa-thumbs-up" style="font-size:24px;color:#3f8a89"></i> {{this.likes}}</a>-->
+            </div>
+        </div>
+        {{/each}}
+    <!--  <div class="pro">
+        <div class="p1">
+        <h2>PostBook </h2>
+        <a href="#">→</a>
+          </div>
+          <div class="p2">
+            <p><i class="fa fa-eye" style="font-size:24px;color:#3f8a89"></i>  <span>20</span></p>
+            <a href="#"><i class="fa fa-thumbs-up" style="font-size:24px;color:#3f8a89"></i> 11</a>
+          </div>
+      </div>
+      <div class="pro">
+        <div class="p1">
+        <h2>FavCRUD </h2>
+        <a href="#">→</a>
+          </div>
+          <div class="p2">
+            <p><i class="fa fa-eye" style="font-size:24px;color:#3f8a89"></i>  <span>15</span></p>
+            <a href="#"><i class="fa fa-thumbs-up" style="font-size:24px;color:#3f8a89"></i> 8</a>
+          </div>
+      </div>
+      <div class="pro">
+        <div class="p1">
+        <h2>NotesChecker </h2>
+        <a href="#">→</a>
+          </div>
+          <div class="p2">
+            <p><i class="fa fa-eye" style="font-size:24px;color:#3f8a89"></i>  <span>25</span></p>
+            <a href="#"><i class="fa fa-thumbs-up" style="font-size:24px;color:#3f8a89"></i> 16</a>
+          </div>
+      </div>
+      <div class="pro">
+        <div class="p1">
+        <h2>tech4u </h2>
+        <a href="#">→</a>
+          </div>
+          <div class="p2">
+            <p><i class="fa fa-eye" style="font-size:24px;color:#3f8a89"></i> <span>9</span> </p>
+            <a href="#"><i class="fa fa-thumbs-up" style="font-size:24px;color:#3f8a89"></i> 3</a>
+          </div>
+      </div>
+      <div class="pro">
+        <div class="p1">
+        <h2>Tuition Site</h2>
+        <a href="#">→</a>
+          </div>
+          <div class="p2">
+            <p><i class="fa fa-eye" style="font-size:24px;color:#3f8a89"></i> 30</p>
+            <a href="#"><i class="fa fa-thumbs-up" style="font-size:24px;color:#3f8a89"></i> 19</a>
+          </div>
+      </div>-->
+    </div><br>
+    <div class="nhead">
+      <h1>Shashank's Posts</h1>
+      <div class="line"></div>
+    </div>
+    <div class="np">
+    <div class="posts" data-aos='fade-up'>
+      {{#each posts}}
+      <div class="post">
+          <div class="po1">
+            <img src="{{this.picurl}}" alt="{{this.title}}" loading="lazy">
+          </div>
+<a href="/binfo/{{this.id}}" style="color:#282828">
+          <div class="po2">
+            <p>{{this.title}}</p>
+            <span>{{this.doc}}</span>
+          </div></a>
+        </div>
+        {{/each}}
+    </div>
+    </div><br>
+  <div class="nhead">
+    <h1>Contact Me</h1>
+    <div class="line"></div>
+  </div>
+  <div class="condetails">
+    <div class="cd1" data-aos='fade-down'>
+      {{#each cond}}
+      <p><i class="fa fa-phone" style="font-size:22px"></i> Mobile No.</p>
+      <a href="tel:{{this.mob}}">{{this.mob}}</a>
+    </div>
+    <div class="cd2" data-aos='fade-down'>
+      <p><i class="fa fa-envelope" style="font-size:22px"></i> Send an Email</p>
+      <a href="mailto:{{this.mail}}" style="font-size:18px;">{{this.mail}}</a>
+    </div>{{/each}}
+  </div>
+    <div class="np2" data-aos='fade-up'>
+  <div class="cf" id="conf">
+    <div class="form1">
+       <form class="" action="/contact" method="post">
+         <input type="text" name="doc" value="" class="minp doc" style="display:none;">
+         <input type="text" name="uname" value="" required placeholder="your name" class="inp1"><br><br>
+         <input type="email" name="mail" value="" required placeholder="your email" class="inp1"><br><br>
+         <textarea name="msg" rows="8" cols="80" required placeholder="your message" class="ta"></textarea><br><br>
+         <button type="submit" name="button">submit <i class="fa fa-send-o" style="font-size:22px"></i></button>
+       </form>
+    </div>
+  </div></div><br>
+<div class="like">
+  {{#each like}}
+<a href="/likeapp/{{this.id}}"> <i class="fa fa-thumbs-up" style="font-size:22px;color:#3f8a89;"></i>{{this.likes}}</a>
+<div class="rs">
+  <span onclick="window.location.reload();"><i class="fa fa-refresh" style="font-size:22px;color:#3f8a89;"></i></span>
+    <span onclick="showsm()"><i class="fa fa-share" style="font-size:22px;color:#3f8a89;"></i></span>
+</div>
+{{/each}}
+</div>
+<br>
+<div class="subs1 unsub1">
+<div class="unsub">
+  <img src="/images/social.png" alt="Shashank Pandey">
+  <h1>Do you want to Unsubscribe ?</h1>
+  <p>If you unsubscribe you will stop receiving our updates through mails</p>
+  <form class="" action="/unsubscribe" method="post">
+    <input type="email" name="mail" value="" class="usinp"required placeholder="enter your email">
+  <!--  <input type="submit" name="" value="send otp to unsubscribe" class="usbtn">-->
+    <button type="submit" name="button" class="usbtn">send otp to unsubscribe</button>
+  </form>
+  <button type="button" name="button" class="cancelbtn" onclick="hideunsub()">Cancel</button>
+</div></div>
+<footer id="footer">
+  <div class="naam">Shashank Pandey</div>
+  <center>
+  <div class="links">
+    {{#each cond}}
+    <ul>
+      <li> <a href="{{this.insta}}"><i class="fa fa-instagram" style="font-size:20px"></i></a> </li>
+        <li> <a href="{{this.linkedin}}"><i class="fa fa-linkedin-square" style="font-size:20px"></i></a> </li>
+          <li> <a href="{{this.twitter}}"><i class="fa fa-twitter-square" style="font-size:20px"></i></a> </li>
+    </ul>{{/each}}
+  </div></center><br>
+  <p> © All Rights Reserved by codershashank.onrender.com</p>
+  <p class="usp">You will receive an email when a new Post or Project will be added on this site,<span onclick="showunsub()">unsubscribe</span></p>
+</footer>
+<div class="subs1">
+<div class="subs">
+  <span class="cmb" onclick="closemb()">X</span>
+  <h1>Subscribe to Shashank Pandey's Newsletter  <img src="/images/mail-box.png" alt="shashank pandey posts"> </h1>
+  <p>You will get notified through your e-mail when a new blog post will be uploaded</p>
+  <div class="mbtn">
+  <form class="" action="/subs" method="post">
+    <input type="text" name="doc" value="" class="minp doc" required id="dos" style="display:none;">
+    <input type="text" name="url" value="" id="hpurl" style="display:none;">
+    <input type="email" name="mail" value="" class="minp" placeholder="enter your email" required>
+    <button type="submit" name="button">subscribe</button>
+  </form>  </div>
+</div></div>
+<div class="ham" onclick="showham()"><span></span><span></span><span></span></div>
+<div class="hamlinks">
+  <h1>Shashank Pandey</h1>
+  <ul class="">
+    <!--  <li class="nl"> <a href="#" class="nl">Home</a> </li>-->
+    <li class="hl"> <a href="/allprojects" class="hl">my projects</a> </li>
+    <li class="hl"> <a href="/allposts" class="hl">posts</a> </li>
+    <li class="hl"> <a href="#" class="hl" onclick="highlight();hideham2();">about me</a> </li>
+    <!--<li class="hl"> <button type="button" name="button" class="hl" style="background:none;border:none;cursor:pointer;" onclick="showmb();hideham2();">
+      subscribe</button>
+    </li>-->
+  </ul>
+    <button type="button" name="button" class="cm cm2" onclick="window.location.href='#conf';hideham2();">contact me</button>
+</div>
+<div class="smbox">
+  <span onclick="closesm()">X</span>
+  <h1>Share This Page:</h1>
+  <ul>
+    <li class="smboxlink"> <a href="#" class="smboxlink wa" target="_blank"><i class="fa fa-whatsapp" style="font-size:22px;color:green;"></i></a> </li>
+    <li class="smboxlink"> <a href="#" class="smboxlink fb" target="_blank"><i class="fa fa-facebook-f" style="font-size:22px;color:blue;"></i></a> </li>
+    <li class="smboxlink">  <a href="#" class="smboxlink tr" target="_blank"><i class="fa fa-twitter" style="font-size:22px;color:skyblue;"></i></a> </li>
+    <li class="smboxlink"> <a href="#" target="_blank" class="smboxlink ld"><i class="fa fa-linkedin-square" style="font-size:22px;color:blue;"></i></a> </li>
+  </ul>
+</div>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init({
+    offset: 300, // offset (in px) from the original trigger point
+    duration: 1000, // values from 0 to 3000, with step 50ms
+    once: true, // whether animation should happen only once - while scrolling down
+  });
+</script>
+<script>
+  let count=0;let count2=0;let count3=0;let count4=0;let count5=0;
+  let closemb=()=>{
+    document.getElementsByClassName('subs')[0].style.display="none";
+  }
+  let showmb=()=>{
+    count++;
+    if(count%2!=0){
+        document.getElementsByClassName('subs')[0].style.display="block";
+        document.getElementsByClassName('subs')[0].style.display="flex";
+    }else{
+        document.getElementsByClassName('subs')[0].style.display="none";
+    }
+  }
+  function hideunsub(){
+  //  document.getElementsByClassName('unsub')[0].style.display="none";
+  document.getElementsByClassName('unsub')[0].classList.add('n');
+  }
+  let showunsub=()=>{
+    count2++;
+    if(count2%2!=0){
+        document.getElementsByClassName('unsub')[0].classList.remove('n');
+        document.getElementsByClassName('unsub')[0].classList.add('df');
+        console.log("odd")
+    }else{
+        document.getElementsByClassName('unsub')[0].classList.remove('df');
+        document.getElementsByClassName('unsub')[0].style.display="none";
+    }
+  }
+  let highlight=()=>{
+    count3++;
+    if(count3%2!=0){
+    document.getElementsByClassName('aboutme')[0].style.background="#9BABB8";
+  }else{
+    document.getElementsByClassName('aboutme')[0].style.background="#fff";
+  }
+  }
+  let showham=()=>{
+    count4++;
+    if(count4%2!=0){
+      document.getElementsByClassName('hamlinks')[0].classList.add('dbz');
+      document.getElementsByClassName('ham')[0].classList.add('zi');
+    }else{
+      document.getElementsByClassName('hamlinks')[0].classList.remove('dbz');
+      document.getElementsByClassName('ham')[0].classList.remove('zi');
+    }
+  }
+  let hideham2=()=>{
+    document.getElementsByClassName('hamlinks')[0].classList.remove('dbz');
+    document.getElementsByClassName('ham')[0].classList.remove('zi');
+  }
+  function expandimg(){
+    count5++;
+    if(count5%2!=0){
+    document.getElementsByClassName('sp')[0].classList.add('exi');
+  }else{
+    document.getElementsByClassName('sp')[0].classList.remove('exi');
+  }
+  }
+  function ppl(){
+    let doc=document.querySelectorAll('.doc');
+    let date= new Date();
+    let day=date.getDate();let month=date.getMonth()+1;let year=date.getFullYear();
+    let md=`${day}-${month}-${year}`;
+    let mt=`${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`;
+    let link=encodeURI(window.location.href);
+    document.getElementById('hpurl').value=`${link}`;
+    //alert(link)
+    for (let i = 0; i < doc.length; i++) {
+      doc[i].value=`date:${md}`;
+    }
+  //  alert(document.getElementById('hpurl').value)
+  }
+  ppl();
+</script>
+<script src="/js/sm.js"></script>
+  </body>
+</html>

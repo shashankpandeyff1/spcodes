@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Information About Shashank Pandey">
+    <meta name="keywords" content="shashank pandey,Shashank Pandey,Who is shashank pandey?">
+    <meta name="author" content="Shashank Pandey">
+    <link rel="shortcut icon" href="/images/shashank.png">
+    <link rel="stylesheet" href="/css/update.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Update Contact Details</title>
+  </head>
+  <body>
+    <a href="/crud">Back To View Data Page</a>
+    <div class="box">
+    <h1>Hey Shashank wanna Update these data ? GO ON.</h1>
+    <form class="" action="/ucondt/{{cd.id}}" method="post">
+    <input type="text" name="author" value="{{cd.author}}" required placeholder="author(probably me shashank)"><br><br>
+    <input type="text" name="mob" value="{{cd.mob}}" required placeholder="mob. no." ><br><br>
+    <input type="text" name="mail" value="{{cd.mail}}" required placeholder="email id"><br><br>
+    <input type="text" name="insta" value="{{cd.insta}}" required placeholder="insta acc. link"><br><br>
+    <input type="text" name="linkedin" value="{{cd.linkedin}}" required placeholder="linkedin acc. link"><br><br>
+    <input type="text" name="twitter" value="{{cd.twitter}}" required placeholder="twitter acc. link"><br><br>
+    <input type="text" name="doc" value="{{cd.doc}}" required placeholder="Date of creation"><br><br>
+    <input type="submit" name="" value="update contact details">
+    </form>
+    </div>
+  </body>
+</html>

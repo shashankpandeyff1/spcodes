@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Hey Add & Manage Blog Posts || Shashank Pandey Blogs</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Information About Shashank Pandey">
+    <meta name="keywords" content="shashank pandey,Shashank Pandey,Who is shashank pandey?">
+    <meta name="author" content="Shashank Pandey">
+    <link rel="shortcut icon" href="/images/shashank.png">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/content.css">
+  </head>
+  <body>
+    <div class="box" id="header">
+      <h1>Shashank Pandey Blogs</h1>
+      <ul>
+        <li> <a href="#">My Posts</a> </li>
+        <li> <a href="#">Draft Posts</a> </li>
+        <li> <button type="button" name="button" onclick="show()" id="ma">My Activity</button> </li>
+      </ul>
+    </div>
+    <div class="popup">
+      <h1>Your Login Activity(Logged in at:)</h1><br>
+      <img src="/images/la.jpg" alt="Shashank Pandey Blogs">
+      {{#each loginat}}
+      <p>{{time}}</p><br>
+      {{/each}}
+    </div>
+    <div class="box box2">
+      <div class="b1">
+      <img src="/images/blog.jpg" alt="Shashank Pandey Blogs">
+      </div>
+      <div class="b2">
+        <h1>HELLO 👋 User {{uname}}</h1>
+        <div class="stat s1">
+          Total No. of Posts created by you:<span>{{totalpost}}</span>
+        </div>
+        <div class="stat s2" id="s1">
+          Last Blog Post uploaded on:<span>{{lastpost}}</span>
+        </div>
+        <div class="stat s3">
+          Total No. of Likes Received:<span>{{likes}}</span>
+        </div>
+        <div class="stat s4">
+          Total No. of Comments Received<span>10.6.23</span>
+        </div>
+      </div>
+    </div>
+    <div class="box">
+      <p>Your blog is your canvas, and every post is a brushstroke in the masterpiece of your online journey.
+        Keep painting your thoughts, and watch your world unfold.</p>
+    </div>
+    <div class="posts">
+      <div>
+      <h1>Add a New Blog Post</h1><br>
+      <form class="" action="/post" method="post" enctype="multipart/form-data">
+        <input type="hidden" name="url" value="" class="pageurl">
+        <input type="text" name="title" value="" required placeholder="post title"><br><br>
+        <input type="text" name="doc" value="" required placeholder="date of creation" class="doc"><br><br>
+        <input type="file" name="pic" value="" required><br><br>
+        <textarea name="exp" rows="8" cols="80" required placeholder="explanation"></textarea><br><br>
+        <textarea name="con" rows="8" cols="80" required placeholder="conclusion"></textarea><br><br>
+        <input type="text" name="source" value="" required placeholder="source"><br><br>
+        <input type="submit" name="" value="add post !">
+      </form><br>
+      <button type="button" name="button" onclick="window.location.href='/notifyusers'" class="notify">Notify All Subscribers</button><br><br>
+    </div>
+    <div>
+      <h1>add a source to your existing post !!</h1><br>
+      <form class="" action="/nsource" method="post">
+        <input type="text" name="id" value="{{postid}}" required placeholder="post id"><br><br>
+        <input type="text" name="source" value="" required placeholder="source url"><br><br>
+        <input type="submit" name="" value="add a pic !">
+      </form><br></div>
+      <div>
+      <h1>Add Post MetaData</h1><br>
+      <form class="" action="/metadata" method="post" enctype="multipart/form-data">
+        <input type="text" name="id" value="{{postid}}" required placeholder="post id"><br><br>
+        <input type="text" name="head" value=""  placeholder="add a new heading"><br> <br>
+        <textarea name="para" rows="8" cols="80"  placeholder="add a new paragraph"></textarea><br><br>
+        <input type="file" name="npic" value="" ><br><br>
+        <input type="submit" name="" value="add metadata !">
+      </form><br></div>
+      <div>
+      <h1>Add a List in Post</h1><br>
+      <form class="" action="/plist" method="post">
+        <input type="text" name="id" value="{{postid}}" required placeholder="post id"><br><br>
+        <input type="text" name="list" value="" required placeholder="point"><br><br>
+        <input type="submit" name="" value="add point !">
+      </form></div>
+    </div>
+    <div class="blogs">
+        <div class="yblogs">
+        <h1>Your Posts</h1><br>
+        {{#each yourposts}}
+        <div><center><button type="button" ondblclick="window.location.href='/binfo/{{this.id}}'"  onclick="showPostInfo"name="button">{{this.title}}</button><br>
+          <a href="/upost/{{this.id}}"><i class='fa fa-edit'></i></a> <a href="/dpost/{{this.id}}"><i class="fa fa-trash-o"></i></a>
+          <a href="/cc/{{this.id}}"> comments</a>
+          <a href="/cs/{{this.id}}"> source</a>
+          <a href="/pmd/{{this.id}}"> metadata</a>
+          <a href="/listpoint/{{this.id}}"> list points</a><center>
+        </div><br>
+        {{/each}}
+      </div>
+      <div class="drafts">
+        <h1>Drafts</h1><br>
+        {{#each drafts}}
+        <div><center><button type="button" ondblclick="window.location.href='/binfo/{{this.id}}'" onclick="showPostInfo"name="button">{{this.title}}</button><br>
+          <a href="/upost/{{this.id}}"><i class='fa fa-edit'></i></a> <a href="/dpost/{{this.id}}"><i class="fa fa-trash-o"></i></a>
+          <a href="/cc/{{this.id}}"> comments</a>
+          <a href="/cs/{{this.id}}"> source</a>
+          <a href="/pmd/{{this.id}}"> metadata</a>
+          <a href="/listpoint/{{this.id}}"> list points</a>
+          <a href="/uploaddraft/{{this.id}}">Upload this draft</a>
+          <center>
+        </div><br>
+        {{/each}}
+      </div>
+    </div>
+    <script>
+    let flag=false;
+      let show=()=>{
+        flag=!flag;
+        if(flag){
+          document.getElementsByClassName('popup')[0].classList.add('db');
+          document.getElementById('ma').classList.add('buttonhover');
+
+        }
+        else{
+          document.getElementsByClassName('popup')[0].classList.remove('db');
+          document.getElementById('ma').classList.remove('buttonhover');
+        }
+      }
+    </script>
+  </body>
+</html>

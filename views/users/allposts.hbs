@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Information About Shashank Pandey">
+    <meta name="keywords" content="shashank pandey-Shashank Pandey-Who is shashank pandey?-Shashank Pandey Blogs-{{#each keywords}}{{this.keyword}}-{{/each}}">
+    <meta name="author" content="Shashank Pandey">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5998261330137420"crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="/images/shashank.png">
+    <link rel="stylesheet" href="/css/allposts.css">
+    <link rel="stylesheet" href="/css/smbox.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Shashank Pandey Blogs</title>
+  </head>
+  <body>
+    <header id="header">
+      <a href="/">←</a> <h1>Shashank Pandey's Portfolio</h1>
+      <span onclick="showsm()">...</span>
+    </header><br>
+    <div class="thumbnail">
+    <a href="/allposts"><img src="/images/blogt.png" alt="{{#each keywords}}{{this.keyword}}-{{/each}}"></a>
+    <a href="/allposts"><img src="/images/switchhit.png" alt="{{#each keywords}}{{this.keyword}}-{{/each}}" class="t2 jj"></a>
+  </div>
+    <div class="head">
+      <h1>Shashank Pandey Blog Posts (<span>{{pc}} Posts</span>)</h1>
+    </div>
+    <div class="filters">
+    <!--  <a href="/postfilter/views">Max Views</a><a href="/postfilter/likes">Max Likes</a>
+      <a href="/postfilter/comments">Max Comments</a>-->
+      <a href="/postfilter/mtl">Latest to Oldest</a>
+      <a href="/postfilter/lth">Oldest to Latest</a>
+      <a href="/postfilter/cricposts">Show Cricket Posts only</a>
+    </div>
+    <div class="posts">
+    {{#each posts}}
+    <div class="post">
+      <h1>{{this.title}}</h1>
+      <div class="pv">
+      <p>Published On:<span>{{this.doc}}</span></p>
+      <p>Views:<span>{{this.views}}</span></p>
+    </div><br>
+        <a href="/binfo/{{this.id}}">Read More</a>
+    </div><br>
+    {{/each}}
+  </div><br>
+    <footer id="footer">
+      <div class="naam">Shashank Pandey</div>
+      <center>
+      <div class="links">
+        {{#each cond}}
+        <ul>
+          <li class="fl"> <a href="{{this.insta}}"><i class="fa fa-instagram" style="font-size:20px"></i></a> </li>
+            <li class="fl"> <a href="{{this.linkedin}}"><i class="fa fa-linkedin-square" style="font-size:20px"></i></a> </li>
+              <li class="fl"> <a href="{{this.twitter}}"><i class="fa fa-twitter-square" style="font-size:20px"></i></a> </li>
+        </ul>{{/each}}
+      </div></center><br>
+      <p> © All Rights Reserved by shashankspandey.com</p>
+    </footer>
+    <div class="smbox">
+      <span onclick="closesm()">X</span>
+      <h1>Share This Page:</h1>
+      <ul>
+        <li class="smboxlink"> <a href="#" class="smboxlink wa" target="_blank"><i class="fa fa-whatsapp" style="font-size:22px;color:green;"></i></a> </li>
+        <li class="smboxlink"> <a href="#" class="smboxlink fb" target="_blank"><i class="fa fa-facebook-f" style="font-size:22px;color:blue;"></i></a> </li>
+        <li class="smboxlink">  <a href="#" class="smboxlink tr" target="_blank"><i class="fa fa-twitter" style="font-size:22px;color:skyblue;"></i></a> </li>
+        <li class="smboxlink"> <a href="#" target="_blank" class="smboxlink ld"><i class="fa fa-linkedin-square" style="font-size:22px;color:blue;"></i></a> </li>
+      </ul>
+    </div>
+    <script src="/js/sm.js"></script>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Information About Shashank Pandey">
+    <meta name="keywords" content="shashank pandey,Shashank Pandey,Who is shashank pandey?">
+    <meta name="author" content="Shashank Pandey">
+    <link rel="shortcut icon" href="/images/shashank.png">
+    <link rel="stylesheet" href="/css/admin.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Manage Users || Shashank Pandey Portfolio</title>
+    <link rel="stylesheet" href="/css/mu.css">
+  </head>
+  <body>
+    <div class="box">
+    <div class="new">
+    <h1>Create & Manage Users</h1>
+    <form class="" action="/newuser" method="post"> <br>
+      <input type="text" name="uname" value="" required placeholder="username"><br><br>
+      <input type="email" name="mail" value="" required placeholder="email"><br><br>
+      <input type="password" name="pass" value="" required placeholder="password"><br><br>
+      <select class="" name="role" id="role">
+        <option value="content writer">Content Writer</option>
+      </select><br><br>
+      <input type="submit" name="" value="add !">
+    </form></div>
+    <div class="users">
+      <h1>All Users</h1><br>
+      {{#each users}}
+      <div class="user">
+        <p>{{this.uname}}({{this.role}})</p><br>
+        <a href="#">update user</a>
+        <a href="#">delete user</a>
+      </div>
+      {{/each}}
+    </div>
+    </div>
+  </body>
+</html>

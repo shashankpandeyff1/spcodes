@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Message</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Information About Shashank Pandey">
+    <meta name="keywords" content="shashank pandey,Shashank Pandey,Who is shashank pandey?">
+    <meta name="author" content="Shashank Pandey">
+    <link rel="shortcut icon" href="/images/shashank.png">
+    <link rel="stylesheet" href="/css/msg.css">
+    <link rel="stylesheet" href="/css/allposts.css">
+    <link rel="stylesheet" href="/css/smbox.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <header id="header">
+      <a href="/">←</a> <h1>Shashank Pandey's Portfolio</h1>
+      <span onclick="showsm()">...</span>
+    </header><br>
+    <div class="msg">
+    <h1>{{msg}}</h1>
+</div>
+
+
+    <footer id="footer" class="ft">
+      <div class="naam">Shashank Pandey</div>
+      <center>
+ <div class="links">
+        {{#each cond}}
+        <ul>
+          <li> <a href="{{this.insta}}"><i class="fa fa-instagram" style="font-size:20px"></i></a> </li>
+            <li> <a href="{{this.linkedin}}"><i class="fa fa-linkedin-square" style="font-size:20px"></i></a> </li>
+              <li> <a href="{{this.twitter}}"><i class="fa fa-twitter-square" style="font-size:20px"></i></a> </li>
+        </ul>{{/each}}
+      </div></center><br>
+      <p> © All Rights Reserved by shashankspandey.com</p>
+    </footer>
+    <div class="smbox">
+      <span onclick="closesm()">X</span>
+      <h1>Share This Page:</h1>
+      <ul>
+        <li class="smboxlink"> <a href="#" class="smboxlink wa" target="_blank"><i class="fa fa-whatsapp" style="font-size:22px;color:green;"></i></a> </li>
+        <li class="smboxlink"> <a href="#" class="smboxlink fb" target="_blank"><i class="fa fa-facebook-f" style="font-size:22px;color:blue;"></i></a> </li>
+        <li class="smboxlink">  <a href="#" class="smboxlink tr" target="_blank"><i class="fa fa-twitter" style="font-size:22px;color:skyblue;"></i></a> </li>
+        <li class="smboxlink"> <a href="#" target="_blank" class="smboxlink ld"><i class="fa fa-linkedin-square" style="font-size:22px;color:blue;"></i></a> </li>
+      </ul>
+    </div>
+    <script src="/js/sm.js"></script>
+  </body>
+</html>

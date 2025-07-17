@@ -1,0 +1,41 @@
+let mongoose=require("mongoose");
+let abtme=new mongoose.Schema({
+  pic:{
+    required:true,
+    type:String,
+  },
+  picurl:{
+    required:true,
+    type:String,
+  },
+  abt:{
+    required:true,
+    type:String,
+    maxLength:320,
+    lowercase:true,
+    trim:true,
+  },
+  doc:{
+    required:true,
+    type:String,
+  },
+  tag:{
+    required:true,
+    type:String,
+    maxLength:25,
+  },
+  /*techs:[{
+    tech:{
+      required:true,
+      type:String,
+      maxLength:30,
+    },
+    why:{
+      required:true,
+      type:String,
+      maxLength:100,
+    }
+  }]*/
+})
+let ABOUT=new mongoose.model("ABOUT",abtme);
+module.exports=ABOUT;
